@@ -9,3 +9,4 @@ weight_float = float(weight)
 BMI_float = weight_float / (height_float ** 2)
 BMI_str = str(BMI_float)
 print(BMI_str[0:1])
+
