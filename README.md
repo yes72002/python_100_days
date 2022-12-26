@@ -25,16 +25,16 @@ Day16 - 2022.12.23 - Intermediate - Object Oriented Programming (OOP)
 Day17 - 2022.12.24 - Intermediate - The Quiz Project & the Benefits of OOP  
 Day18 - 2022.12.25 - Intermediate - Turtle & the Graphical User Interface (GUI)  
 Day19 - 2022.12.26 - Intermediate - Instances, State and Higher Order Functions  
-Day20 - 2022.12.26 - Intermediate - Build the Snake Game Part 1: Animation & Coordinates  
-Day21 - 2022.12.27 - Intermediate - Build the Snake Game Part 2: Inheritance & List Slicing  
-Day22 - 2022.12.28 - Intermediate - Build Pong: The Famous Arcade Game  
-Day23 - 2022.12.29 - Intermediate - The Turtle Crossing Capstone Project  
-Day24 - 2022.12.30 - Intermediate - Files, Directories and Paths  
-Day25 - 2022.12.31 - Intermediate - Working with CSV Data and the Pandas Library  
-Day26 - 2022.01.01 - Intermediate - List Comprehension and the NATO Alphabet  
-Day27 - 2022.01.02 - Intermediate - Tkinter, *args, **kwargs and Creating GUI Programs  
-Day28 - 2022.01.03 - Intermediate - Tkinter, Dynamic Typing and the Pomodoro GUI Application  
-Day29 - 2022.01.04 - Intermediate - Building a Password Manager GUI App with Tkinter  
+Day20 - 2022.12.27 - Intermediate - Build the Snake Game Part 1: Animation & Coordinates  
+Day21 - 2022.12.28 - Intermediate - Build the Snake Game Part 2: Inheritance & List Slicing  
+Day22 - 2022.12.29 - Intermediate - Build Pong: The Famous Arcade Game  
+Day23 - 2022.12.20 - Intermediate - The Turtle Crossing Capstone Project  
+Day24 - 2022.12.31 - Intermediate - Files, Directories and Paths  
+Day25 - 2022.01.01 - Intermediate - Working with CSV Data and the Pandas Library  
+Day26 - 2022.01.02 - Intermediate - List Comprehension and the NATO Alphabet  
+Day27 - 2022.01.03 - Intermediate - Tkinter, *args, **kwargs and Creating GUI Programs  
+Day28 - 2022.01.04 - Intermediate - Tkinter, Dynamic Typing and the Pomodoro GUI Application  
+Day29 - 2022.01.05 - Intermediate - Building a Password Manager GUI App with Tkinter  
 ...  
 
 ## Notes
