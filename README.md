@@ -35,6 +35,18 @@ Day26 - 2022.01.02 - Intermediate - List Comprehension and the NATO Alphabet
 Day27 - 2022.01.03 - Intermediate - Tkinter, *args, **kwargs and Creating GUI Programs  
 Day28 - 2022.01.04 - Intermediate - Tkinter, Dynamic Typing and the Pomodoro GUI Application  
 Day29 - 2022.01.05 - Intermediate - Building a Password Manager GUI App with Tkinter  
+Day30 - 2022.01.06 - Intermediate - Errors, Exceptions and JSON Data: Improving the Password  
+Day31 - 2022.01.07 - Intermediate - Flash Card App Capstone Project  
+Day32 - 2022.01.08 - Intermediate+ Send Email (smtplib) & Manage Dates (datetime)  
+Day33 - 2022.01.09 - Intermediate+ API Endpoints & API Parameters - ISS Overhead Notifier  
+Day34 - 2022.01.10 - Intermediatet API Practice - Creating a GUI Quiz App  
+Day35 - 2022.01.11 - Intermediate+ Keys, Authentication & Environment Variables: Send SMS  
+Day36 - 2022.01.12 - Intermediate+ Stock Trading News Alert Project  
+Day37 - 2022.01.13 - Intermediatet Habit Tracking Project: API Post Requests & Headers  
+Day38 - 2022.01.14 - Intermediate+ Workout Tracking Using Google Sheets  
+Day39 - 2022.01.15 - Intermediate+ Capstone Part 1: Flight Deal Finder  
+Day40 - 2022.01.16 - Intermediate+ Capstone Part 2: Flight Club  
+Day41 - 2022.01.17 - Web Foundation - Introduction to HTML  
 ...  
 
 ## Notes
