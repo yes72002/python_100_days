@@ -39,7 +39,7 @@ Day30 - 2022.01.06 - Intermediate - Errors, Exceptions and JSON Data: Improving 
 Day31 - 2022.01.07 - Intermediate - Flash Card App Capstone Project  
 Day32 - 2022.01.08 - Intermediate+ Send Email (smtplib) & Manage Dates (datetime)  
 Day33 - 2022.01.09 - Intermediate+ API Endpoints & API Parameters - ISS Overhead Notifier  
-Day34 - 2022.01.10 - Intermediatet API Practice - Creating a GUI Quiz App  
+Day34 - 2022.01.10 - Intermediate+ API Practice - Creating a GUI Quiz App  
 Day35 - 2022.01.11 - Intermediate+ Keys, Authentication & Environment Variables: Send SMS  
 Day36 - 2022.01.12 - Intermediate+ Stock Trading News Alert Project  
 Day37 - 2022.01.13 - Intermediate+ Habit Tracking Project: API Post Requests & Headers  
