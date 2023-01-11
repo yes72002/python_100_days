@@ -42,7 +42,7 @@ Day33 - 2022.01.09 - Intermediate+ API Endpoints & API Parameters - ISS Overhead
 Day34 - 2022.01.10 - Intermediatet API Practice - Creating a GUI Quiz App  
 Day35 - 2022.01.11 - Intermediate+ Keys, Authentication & Environment Variables: Send SMS  
 Day36 - 2022.01.12 - Intermediate+ Stock Trading News Alert Project  
-Day37 - 2022.01.13 - Intermediatet Habit Tracking Project: API Post Requests & Headers  
+Day37 - 2022.01.13 - Intermediate+ Habit Tracking Project: API Post Requests & Headers  
 Day38 - 2022.01.14 - Intermediate+ Workout Tracking Using Google Sheets  
 Day39 - 2022.01.15 - Intermediate+ Capstone Part 1: Flight Deal Finder  
 Day40 - 2022.01.16 - Intermediate+ Capstone Part 2: Flight Club  
