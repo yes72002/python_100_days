@@ -3,7 +3,7 @@
 [100 Days of Code: The Complete Python Pro Bootcamp for 2023](https://www.udemy.com/course/100-days-of-code/)
 
 ## Starting Time
-2022.12.06 - Now
+2022.12.06 - 2022.01.17
 
 ## Course Content
 Day01 - 2022.12.07 - Beginner - Working with Variables in Python to Manage Data  
@@ -47,9 +47,9 @@ Day38 - 2022.01.14 - Intermediate+ Workout Tracking Using Google Sheets
 Day39 - 2022.01.15 - Intermediate+ Capstone Part 1: Flight Deal Finder  
 Day40 - 2022.01.16 - Intermediate+ Capstone Part 2: Flight Club  
 Day41 - 2022.01.17 - Web Foundation - Introduction to HTML  
-...  
 
 ## Notes
-+ Still working on this challenge
+<!-- + Still working on this challenge -->
++ Since the rest of the courses are about web developers, and I don't want to be a web developer, so this project stops here.
 
 
