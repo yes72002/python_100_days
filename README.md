@@ -50,6 +50,7 @@ Day41 - 2022.01.17 - Web Foundation - Introduction to HTML
 
 ## Notes
 <!-- + Still working on this challenge -->
-+ Since the rest of the courses are about web developers, and I don't want to be a web developer, so this project stops here.
+<!-- + Since the rest of the courses are about web developers, and I don't want to be a web developer, so this project stops here. -->
++ A great python course, strongly recommend it!
 
 
