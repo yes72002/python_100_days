@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include 'header.html' %}
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url_for('home') }}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url_for('about') }}">About</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url_for('contact') }}">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('{{ post["image_url"] }}')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h1>{{ post["title"] }}</h1>
+                            <h2 class="subheading">{{ post["subtitle"] }}</h2>
+                            <span class="meta">
+                                Posted by
+                                <a href="#!">Jim Li</a>
+                                on March 04, 2024
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <!-- <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p> -->
+                        <p>{{ post["body"] }}</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- Footer-->
+        {% include 'footer.html' %}
+    </body>
+</html>
