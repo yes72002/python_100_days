@@ -1,0 +1,327 @@
+{
+	"info": {
+		"_postman_id": "78a319fc-68a8-48ee-961c-a72606dffbdc",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33547691"
+	},
+	"item": [
+		{
+			"name": "Get All Cafes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/all",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Random Cafe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/random",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"random"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Cafes By Location",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/search?loc=Peckham",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "loc",
+							"value": "Peckham"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add the Cafe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "aaTimberyard",
+							"type": "text"
+						},
+						{
+							"key": "map_url",
+							"value": "https://www.google.com",
+							"type": "text"
+						},
+						{
+							"key": "img_url",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "has_sockets",
+							"value": "True",
+							"type": "text"
+						},
+						{
+							"key": "has_toilet",
+							"value": "True",
+							"type": "text"
+						},
+						{
+							"key": "has_wifi",
+							"value": "True",
+							"type": "text"
+						},
+						{
+							"key": "can_take_calls",
+							"value": "True",
+							"type": "text"
+						},
+						{
+							"key": "seats",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "coffee_price",
+							"value": "£2.40",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "aaa",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update One Cafe price",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "aaTimberyard",
+							"type": "text"
+						},
+						{
+							"key": "map_url",
+							"value": "https://www.google.com",
+							"type": "text"
+						},
+						{
+							"key": "img_url",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "has_sockets",
+							"value": "True",
+							"type": "text"
+						},
+						{
+							"key": "has_toilet",
+							"value": "True",
+							"type": "text"
+						},
+						{
+							"key": "has_wifi",
+							"value": "True",
+							"type": "text"
+						},
+						{
+							"key": "can_take_calls",
+							"value": "True",
+							"type": "text"
+						},
+						{
+							"key": "seats",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "coffee_price",
+							"value": "£2.40",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "aaa",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/update-price/22?new_price=£3.8",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"update-price",
+						"22"
+					],
+					"query": [
+						{
+							"key": "new_price",
+							"value": "£3.8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete One Cafe ",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "aaTimberyard",
+							"type": "text"
+						},
+						{
+							"key": "map_url",
+							"value": "https://www.google.com",
+							"type": "text"
+						},
+						{
+							"key": "img_url",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "has_sockets",
+							"value": "True",
+							"type": "text"
+						},
+						{
+							"key": "has_toilet",
+							"value": "True",
+							"type": "text"
+						},
+						{
+							"key": "has_wifi",
+							"value": "True",
+							"type": "text"
+						},
+						{
+							"key": "can_take_calls",
+							"value": "True",
+							"type": "text"
+						},
+						{
+							"key": "seats",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "coffee_price",
+							"value": "£2.40",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "aaa",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/report-closed/1?api-key=TopSecretAPIKe",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"report-closed",
+						"1"
+					],
+					"query": [
+						{
+							"key": "api-key",
+							"value": "TopSecretAPIKe"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
