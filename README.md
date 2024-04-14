@@ -111,9 +111,9 @@ Day100 - 2024.04.xx - Professional Portfolio Project - [Data Science]
 ## Notes
 <!-- + Still working on this challenge -->
 <!-- + Since the rest of the courses are about web developers, and I don't want to be a web developer, so this project stops here. -->
-## Has My Life Changed?
-## Absolutely YES!
-## Don't hesitate, come and take this class!
-## Strongly Recommended!
+## Has My Life Changed?  
+> **Absolutely YES!**  
+> **Don't hesitate, come and take this class!**  
+> **Strongly Recommended!**  
 
 
