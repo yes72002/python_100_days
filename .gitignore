@@ -1,0 +1,56 @@
+# VS Code
+__pycache__/
+.vscode/
+
+# python 100 days files
+*.zip
+Wallpapers/
+__MACOSX/
+test.md
+test.py
+Day07/Solution+-+Hangman+Flowchart+1.png
+Day14/d14pj_higher_lower_game_angela.py
+Day15/d15_main_angela.py
+Day22/Solution+-+pong-game-final
+Day35/d35pj_rain_alert.py
+
+Day36/Solution+-+stock-news-end/main.py
+Day36/stock-news-extrahard-start/stock-news-extrahard-start/.project_config
+Day36/stock-news-extrahard-start/stock-news-extrahard-start/d36pj_stock_news_SMS.py
+
+Day37/d37pj_habit_tracking.py
+
+Day38/Solution-Exercise_Tracker
+Day38/d38pj_exercise_tracker.py
+
+Day39/flight-deals-start/main copy.py
+Day39/flight-deals-step-2-solution/
+Day39/flight-deals-step-3-solution/
+Day39/flight-deals-step-4-solution/
+Day39/flight-deals-step-5-solution/
+
+Day40/flight-club-step-3-solution/
+Day40/flight-club-step-4-solution/
+Day40/flight-club-step-5-solution/
+
+Day41/2017.05.04.(1).jpg
+Day41/2017.05.04.(2).jpg
+
+Day41/2017.05.04.(1).jpg
+
+Day47/imperialtheory.json
+Day47/token.json
+Day47/yes72002.json
+
+Day49/nvidia.py
+
+# python secret key files
+secret_key.py
+
+# My Code
+GPA.py
+
+# DotEnv configuration
+.env
+
+
