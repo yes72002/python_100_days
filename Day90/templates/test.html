@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Writing App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        #editor {
+            width: 80%;
+            margin: 0 auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            min-height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="editor" contenteditable="true"></div>
+    <div>
+        <h1>Countdown Timer</h1>
+        <div id="timer">0</div>
+    </div>
+    <script>
+        let timer;
+
+        // Function to clear content if typing stops
+        function clearContent() {
+            document.getElementById('editor').textContent = '';
+        }
+
+        // Event listener for keyup event
+        document.getElementById('editor').addEventListener('keyup', function() {
+            // Clear previous timer
+            clearTimeout(timer);
+            // Set timer to clear content after 2 seconds of inactivity
+            timer = setTimeout(clearContent, 2000);
+        });
+
+        // Function to update timer every second
+        function updateTimer() {
+            setInterval(function() {
+                // Get timer element
+                let timerElement = document.getElementById('timer');
+                // Increment timer value
+                timerElement.textContent = parseInt(timerElement.textContent) - 1;
+            }, 1000);
+        }
+
+        // Call function to update timer
+        updateTimer();
+    </script>
+
+    <!-- <div>
+        <h1>Countdown Timer</h1>
+        <div id="timer">{{ timer }}</div>
+    </div> -->
+</body>
+</html>
+
