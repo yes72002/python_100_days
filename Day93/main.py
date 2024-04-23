@@ -120,7 +120,7 @@ for ratings in ratingslabels:
 # print(len(stars_texts))
 # print(len(ratings_texts))
 
-with open('report.csv', 'w') as file:
+with open('day_93_report.csv', 'w') as file:
     file.write(f"bookname, subtitle, author, run time, release date, language, stars, ratings\n")
     for i in range(0, len(bookname_texts)):
         file.write(
