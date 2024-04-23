@@ -1,0 +1,54 @@
+{% from 'bootstrap5/form.html' import render_form %}
+{% include "header.html" %}
+
+<!-- Page Header-->
+<header
+  class="masthead"
+  style="background-image: url('../static/assets/img/home-bg.jpg')"
+>
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-8">
+        <div class="site-heading">
+          <h2>Image Color Extract</h2>
+          <h5>A website that finds the most common colours in an uploaded image.</h5>
+          <span class="subheading">A Blog Theme by Start Bootstrap</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Main Content-->
+<div class="container px-4 px-lg-5">
+  <div class="row gx-4 gx-lg-5 justify-content-center">
+    <div class="col-md-10 col-lg-8 col-xl-7">
+
+        <h2 for="task">Demo</h2>
+        <img src="../static/assets/img/sample.jpg" class="mb-3 ms-md-3" alt="..." style="width: 100%" >
+        <h4>File to upload:</h4>
+        <form action="{{ url_for('index') }}" method="post" enctype="multipart/form-data">
+          <input type="file" name="file" id="file">
+          <input type="submit" value="Upload">
+        </form>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Color</th>
+              <th>Color Code</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div style=" padding: 5px; border: 1px solid white; width: 300px; height: 50px; background-color: {{ most_common_color_hex }} ">
+                </div>
+              </td>
+              <td style="vertical-align: middle;">{{ most_common_color_hex }}</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
+
+{% include "footer.html" %}
