@@ -135,7 +135,7 @@ with open('report.csv', 'w') as file:
             f'\n'
         )
 
-print(f"Write date in the report.csv")
+print(f"Write data in the report.csv")
 
 
 
