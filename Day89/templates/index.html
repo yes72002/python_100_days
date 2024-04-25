@@ -1,0 +1,108 @@
+{% from 'bootstrap5/form.html' import render_form %}
+{% include "header.html" %}
+
+<!-- Page Header-->
+<header
+  class="masthead"
+  style="background-image: url('../static/assets/img/home-bg.jpg')"
+>
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-6">
+        <div class="site-heading">
+          <h1>TODO List</h1>
+          <span class="subheading">A Blog Theme by Start Bootstrap</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Main Content-->
+<div class="container px-4 px-lg-5">
+  <div class="row gx-4 gx-lg-5 justify-content-start">
+    <div class="col-6 col-md-10 col-lg-8 col-xl-6">
+      <h3 for="task">TODO</h3>
+      <!-- Post preview-->
+      {% for todo in todos_do %}
+      <div class="post-preview ">
+        <div class="row mb-3"> <!-- Add margin bottom here -->
+          <div class="col-2 d-flex align-items-center">
+            <!-- done buton -->
+            <a
+              class="btn btn-primary float-right"
+              href="{{ url_for('done_todo', todo_id=todo.id) }}"
+              >Check</a
+            >
+          </div>
+
+          <div class="col-8 d-flex align-items-center">{{ todo.task }}</div>
+          <div class="col-1 d-flex justify-content-end">
+            <!-- edit buton -->
+            <a
+              class="btn btn-primary float-right"
+              href="{{ url_for('edit_todo', todo_id=todo.id) }}"
+              >Edit</a
+            >
+          </div>
+          <div class="col-1 d-flex align-items-center">
+            <!-- delete buton -->
+            <a
+              class="btn btn-danger float-right"
+              href="{{ url_for('delete_todo', todo_id=todo.id) }}"
+              >✘</a
+            >
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      <!-- Divider-->
+      <hr class="my-4" />
+      <h3 for="task">Checked</h3>
+      {% for todo in todos_done %}
+      <div class="post-preview ">
+        <div class="row mb-3">
+          <div class="col-2 d-flex align-items-center">
+            <!-- done buton -->
+            <a
+              class="btn btn-primary float-right"
+              href="{{ url_for('done_todo', todo_id=todo.id) }}"
+              >Check</a
+            >
+          </div>
+          <div class="col-8 d-flex align-items-center"><del>{{ todo.task }}</del></div>
+          <div class="col-1 d-flex justify-content-end">
+            <!-- edit buton -->
+            <a
+              class="btn btn-primary float-right"
+              href="{{ url_for('edit_todo', todo_id=todo.id, btn='edit') }}"
+              >Edit</a
+            >
+          </div>
+          <div class="col-1 d-flex align-items-center">
+            <!-- delete buton -->
+            <a
+              class="btn btn-danger float-right"
+              href="{{ url_for('delete_todo', todo_id=todo.id) }}"
+              >✘</a
+            >
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Right Side -->
+    <div class="col-4 text-center">
+      <!-- Add new Todo -->
+      <form action="{{ url_for('get_all_todos') }}" method="POST">
+        <h4 for="task" class="mb-2">Create your to-do list below</h4>
+        <div class="form-group mb-2">
+            {{ form.task(class="form-control", style="width: 100%;") }}
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%">Add</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% include "footer.html" %}
