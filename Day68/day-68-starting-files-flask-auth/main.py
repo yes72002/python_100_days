@@ -3,6 +3,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 from sqlalchemy import Integer, String, Boolean
+from wtforms.validators import DataRequired, URL, Email
 from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
 
 
