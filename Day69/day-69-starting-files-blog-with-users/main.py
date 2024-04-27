@@ -7,6 +7,7 @@ from flask_login import UserMixin, login_user, LoginManager, current_user, logou
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import relationship, DeclarativeBase, Mapped, mapped_column
 from sqlalchemy import Integer, String, Text
+from wtforms.validators import DataRequired, URL, Email
 from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
 # Import your forms from the forms.py
@@ -23,8 +24,8 @@ def gravatar_url(email, size=100, rating='g', default='retro', force_default=Fal
     hash_value = hashlib.md5(email.lower().encode('utf-8')).hexdigest()
     return f"https://www.gravatar.com/avatar/{hash_value}?s={size}&d={default}&r={rating}&f={force_default}"
 '''
-Make sure the required packages are installed: 
-Open the Terminal in PyCharm (bottom left). 
+Make sure the required packages are installed:
+Open the Terminal in PyCharm (bottom left).
 
 On Windows type:
 python -m pip install -r requirements.txt
@@ -146,7 +147,7 @@ def register():
         return render_template("register.html", form=register_from)
 
 
-# TODO: Retrieve a user from the database based on their email. 
+# TODO: Retrieve a user from the database based on their email.
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     login_form = LoginForm()
@@ -166,7 +167,7 @@ def login():
             # if user and check_password_hash(user.password, new_password):
                 login_user(user) # Log in the user
                 print('Logged in successfully.')
-                
+
                 return redirect(url_for('get_all_posts'))
             else:
                 flash('Password incorrect. please try again.')
