@@ -1,17 +1,3 @@
-# -----------------------------------------------------------------------------------
-# File name  : t264_uart_html.py
-# Company    : NVIDIA
-# Group      : Silicon Solution Group (SSG)
-# Site       : TDC (Taipei)
-# -----------------------------------------------------------------------------------
-# Revision History :
-# Date       | Version | PIC    | Discription
-# 2024.03.18 | 0       | Jim Li | Initial version
-# 2024.04.24 | 1       | Jim Li | search html in the folder
-# 2024.04.24 | 1       | Jim Li | fix search fail case
-# 2024.04.24 | 1       | Jim Li | fix no html case
-# -----------------------------------------------------------------------------------
-
 import os
 import requests
 from selenium import webdriver
