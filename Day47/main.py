@@ -22,10 +22,9 @@ def gmail_send_message(message_subject, message_content):
     credentials_json = "C:/Users/jimli/OneDrive - NVIDIA Corporation/NVIDIA/Python/python 100 days/Day47/yes72002.json"
     credentials_json = "C:/Users/jimli/OneDrive - NVIDIA Corporation/NVIDIA/Python/python 100 days/Day47/imperialtheory.json"
     credentials_json = "C:/Users/Jim/OneDrive - 國立陽明交通大學/python_100_days/Day47/imperialtheory.json"
-    
-    
+
     creds = None
-    
+
     if os.path.exists("token.json"):
         creds = Credentials.from_authorized_user_file("token.json", SCOPES)
     # If there are no (valid) credentials available, let the user log in.
@@ -37,7 +36,7 @@ def gmail_send_message(message_subject, message_content):
                     credentials_json, SCOPES
             )
             creds = flow.run_local_server(port=0)
-        
+
         # Save the credentials for the next run
         with open("token.json", "w") as token:
             token.write(creds.to_json())
