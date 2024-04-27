@@ -1,0 +1,40 @@
+{% from 'bootstrap5/form.html' import render_form %}
+{% block content %} {% include "header.html" %}
+
+
+<!-- Page Header -->
+<header
+  class="masthead"
+  style="background-image: url('../static/assets/img/post-bg.jpg')"
+>
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="page-heading">
+          <!-- Show a different h1 if editing existing cafe -->
+          <h1>{{ coffee_name}}</h1>
+          <span class="subheading"
+            >You're going to buy a great cafe!</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content-->
+<main class="mb-4">
+  <div class="container">
+    <div class="row col col-lg-8 col-md-10 mx-auto">
+      <div class="col col-lg-5">
+        <h3>Coffee Name: {{ coffee_name }}</h3>
+        <h3>Small Price: {{ small_price }}</h3>
+        <h3>Small Number: {{ small_num }}</h3>
+        <h3>Large Price: {{ large_price }}</h3>
+        <h3>Large Number: {{ large_num }}</h3>
+        <label for="">Stripe API is not available in Taiwan.</label>
+      </div>
+    </div>
+  </div>
+</main>
+{% include "footer.html" %} {% endblock %}

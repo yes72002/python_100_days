@@ -1,0 +1,69 @@
+{% include "header.html" %}
+
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('{{cafe.img_url}}')">
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="post-heading">
+          <h1>{{ cafe.name }}</h1>
+          <!-- <h2 class="subheading">{{ cafe.location }}</h2> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Cafe Content -->
+<article>
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <img src="{{cafe.img_url}}" class="col-md-5 " alt="..." >
+        <h3 class="post-title">{{ cafe.name }}</h3>
+        <p class="post-subtitle">
+          <!-- <a href="{{ cafe.map_url }}" target="_blank"> -->
+          <div class="row">
+            <div class="col-xl-4">Location:</div>
+            <!-- <div class="col-xl-8">{{ cafe.location }}</div> -->
+            <div class="col-xl-8"><a href="{{ cafe.map_url }}" target="_blank">{{ cafe.location }}</a></div>
+          </div>
+          <div class="row">
+            <div class="col-xl-4">Sockets:</div>
+            <div class="col-xl-8">{{ cafe.has_sockets }}</div>
+          </div>
+          <div class="row">
+            <div class="col-xl-4">Toilet:</div>
+            <div class="col-xl-8">{{ cafe.has_toilet }}</div>
+          </div>
+          <div class="row">
+            <div class="col-xl-4">Wifi:</div>
+            <div class="col-xl-8">{{ cafe.has_wifi }}</div>
+          </div>
+          <div class="row">
+            <div class="col-xl-4">Take Calls:</div>
+            <div class="col-xl-8">{{ cafe.can_take_calls }}</div>
+          </div>
+          <div class="row">
+            <div class="col-xl-4">Seats:</div>
+            <div class="col-xl-8">{{ cafe.seats }}</div>
+          </div>
+          <div class="row">
+            <div class="col-xl-4">Coffee Price:</div>
+            <div class="col-xl-8">{{ cafe.coffee_price }}</div>
+          </div>
+
+        <div class="d-flex justify-content-end mb-4">
+          <!-- Editing cafes -->
+          <a
+            class="btn btn-primary float-right"
+            href="{{ url_for('edit_cafe', cafe_id=cafe.id) }}"
+            >Edit Cafe</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+{% include "footer.html" %}
