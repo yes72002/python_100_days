@@ -17,7 +17,7 @@ def prime_checker(number):
 # print(7 % 2)
 # print(7 % 7)
 #Write your code above this line 👆
-    
+
 #Do NOT change any of the code below👇
 n = int(input("Check this number: "))
 prime_checker(number=n)
