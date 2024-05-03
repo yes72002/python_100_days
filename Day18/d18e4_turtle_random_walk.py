@@ -11,7 +11,7 @@ colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSea
 angle = [0, 90, 180, 270]
 
 # random walk
-for i in range(0,100):
+for i in range(0,200):
     r = random.random()
     g = random.random()
     b = random.random()
