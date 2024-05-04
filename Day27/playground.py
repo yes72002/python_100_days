@@ -31,7 +31,3 @@ my_car = Car(make="Nissan")
 # print(my_car.model) # error, use bracket["model"]
 print(my_car.model) # return None
 
-
-
-        
-
