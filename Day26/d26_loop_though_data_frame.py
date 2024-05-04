@@ -11,7 +11,7 @@ for (key, value) in student_dict.items():
 import pandas
 student_data_frame = pandas.DataFrame(student_dict)
 print("student_data_frame")
-print(student_data_frame)
+print(f"student_data_frame = {student_data_frame}")
 
 # Loop through a data frame
 # not particyularly useful
@@ -24,6 +24,7 @@ print(student_data_frame)
 # {new_key:new_value for (index, row) in df.iterrows()}
 print("Loop through rows a data frame")
 for (index, row) in student_data_frame.iterrows():
+    print("----------------")
     print(index) # 0, 1, 2
     print(row) # row object
     print(row.student) # student
