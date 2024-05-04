@@ -85,6 +85,4 @@ button = Button(text="Add", width=45, command=save)
 button.grid(column=1, row=4, columnspan=2)
 
 
-
-
 window.mainloop()
