@@ -28,7 +28,7 @@ def wrong():
     window.after_cancel(timer)
     global word
     if len(to_learn) == 0:
-         messagebox.showinfo(title="Wow!", message="Congratulation! You have already learned all words.")
+        messagebox.showinfo(title="Wow!", message="Congratulation! You have already learned all words.")
     else:
         word = random.choice(to_learn)
         canvas.itemconfig(card, image=card_front_img)
@@ -71,7 +71,6 @@ button_wrong.grid(column=0, row=1)
 photo_right = PhotoImage(file = "images/right.png")
 button_right = Button(image=photo_right, command=right, highlightthickness=0)
 button_right.grid(column=1, row=1)
-
 
 
 window.mainloop()
