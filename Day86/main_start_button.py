@@ -49,7 +49,11 @@ class TypingSpeedTest:
 
         self.root.unbind('<Return>')
 
-if __name__ == "__main__":
+def main():
     root = tk.Tk()
     app = TypingSpeedTest(root)
     root.mainloop()
+
+
+if __name__ == "__main__":
+    main()
