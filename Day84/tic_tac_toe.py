@@ -35,7 +35,7 @@ def determine(xxx):
             line_col_2 += 1
         if x[1] == 3:
             line_col_3 += 1
-    
+
     if line_row_1 == 3:
         bingo = True
     elif line_row_2 == 3:
@@ -52,7 +52,7 @@ def determine(xxx):
         bingo = True
     elif {(1,3), (2,2), (3,1)}.issubset(xxx):
         bingo = True
-    
+
     # print(bingo)
     return bingo
 
@@ -71,30 +71,30 @@ def print_tic(
     state_31 = check_xo((3,1), xxx, ooo)
     state_32 = check_xo((3,2), xxx, ooo)
     state_33 = check_xo((3,3), xxx, ooo)
-    
-    print(f" {state_11} | {state_21} | {state_31} ")
+
+    print(f" {state_11} | {state_12} | {state_13} ")
     print("-----------")
-    print(f" {state_12} | {state_22} | {state_32} ")
+    print(f" {state_21} | {state_22} | {state_23} ")
     print("-----------")
-    print(f" {state_13} | {state_23} | {state_33} ")
+    print(f" {state_31} | {state_32} | {state_33} ")
 
 
 def main():
-    print("        col 1 | col 2 | col 3 ")
-    print("row 1 |       |       |       ")
-    print("------------------------------")
-    print("row 2 |       |       |       ")
-    print("------------------------------")
-    print("row 3 |       |       |       ")
-    print("------------------------------")
+    print("  col | 1 | 2 | 3 ")
+    print("row 1 |   |   |   ")
+    print("------------------")
+    print("row 2 |   |   |   ")
+    print("------------------")
+    print("row 3 |   |   |   ")
+    # print("------------------")
 
-    # xxx = [(1,2), (1,3)]
     xxx = []
     ooo = []
     x_user_move = True
 
     end_of_game = False
     while end_of_game == False:
+        print("================================================")
         # print(x_user_move)
         valid_input = False
         while valid_input == False:
@@ -119,9 +119,9 @@ def main():
                 else:
                     ooo.append((move_row, move_col))
                 valid_input = True
-        print(f"xxx = {xxx}")
-        print(f"ooo = {ooo}")
-        
+        # print(f"xxx = {xxx}")
+        # print(f"ooo = {ooo}")
+
         # print table
         print_tic(
             xxx,
@@ -137,7 +137,7 @@ def main():
         elif win_o == True:
             print("O user win!")
             end_of_game = True
-        
+
         x_user_move = not(x_user_move)
 
 
