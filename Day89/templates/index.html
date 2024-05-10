@@ -26,7 +26,7 @@
       {% for todo in todos_do %}
       <div class="post-preview ">
         <div class="row mb-3"> <!-- Add margin bottom here -->
-          <div class="col-2 d-flex align-items-center">
+          <div class="col-3 d-flex align-items-center">
             <!-- done buton -->
             <a
               class="btn btn-primary float-right"
@@ -35,7 +35,7 @@
             >
           </div>
 
-          <div class="col-8 d-flex align-items-center">{{ todo.task }}</div>
+          <div class="col-7 d-flex align-items-center">{{ todo.task }}</div>
           <div class="col-1 d-flex justify-content-end">
             <!-- edit buton -->
             <a
@@ -61,7 +61,7 @@
       {% for todo in todos_done %}
       <div class="post-preview ">
         <div class="row mb-3">
-          <div class="col-2 d-flex align-items-center">
+          <div class="col-3 d-flex align-items-center">
             <!-- done buton -->
             <a
               class="btn btn-primary float-right"
@@ -69,7 +69,7 @@
               >Check</a
             >
           </div>
-          <div class="col-8 d-flex align-items-center"><del>{{ todo.task }}</del></div>
+          <div class="col-7 d-flex align-items-center"><del>{{ todo.task }}</del></div>
           <div class="col-1 d-flex justify-content-end">
             <!-- edit buton -->
             <a
