@@ -1,6 +1,8 @@
 import pyautogui, cv2
 import keyboard
 
+# dinosaur website: https://elgoog.im/dinosaur-game/
+
 # Set a pause between each action
 pyautogui.PAUSE = 0.1
 
