@@ -63,6 +63,7 @@ for subtitle in subtitles:
     try:
         aaa = subtitle.select_one(selector=".bc-list-item.subtitle").find(name="span").get_text()
         aaa = aaa.replace("\xae","")
+        aaa = aaa.replace(", "," & ")
         subtitle_texts.append(aaa)
     except:
         subtitle_texts.append("-")
@@ -73,7 +74,7 @@ for authorlabel in authorlabels:
     for authors in authors_list:
         aaa = authors.get_text()
         author_element.append(aaa)
-    authorlabel_texts.append(", ".join(author_element))
+    authorlabel_texts.append(" and ".join(author_element))
 
 for runtime in runtimelabels:
     aaa = runtime.find(name="span").get_text()
@@ -100,6 +101,7 @@ for stars in ratingslabels:
 
 for ratings in ratingslabels:
     aaa = ratings.find(name="span", class_="bc-text bc-size-small bc-color-secondary").get_text()
+    aaa = aaa.replace(",","")
     ratings_texts.append(aaa)
 
 # print(bookname_texts)
