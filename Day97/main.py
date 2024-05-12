@@ -10,7 +10,7 @@ from flask_ckeditor import CKEditor, CKEditorField
 from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
 from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
-from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
+from forms import CreatePostForm, RegisterForm, LoginForm
 
 class Base(DeclarativeBase):
     pass
