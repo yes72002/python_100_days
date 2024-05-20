@@ -1,0 +1,100 @@
+{% include "header.html" %}
+
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('{{post.img_url}}')">
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="post-heading">
+          <h1>{{ post.name }}</h1>
+          <!-- <h2 class="subheading">{{ post.location }}</h2> -->
+          <!-- <span class="meta"
+            >Posted by
+            <a href="/" target="_blank">{{ post.location }}</a>
+            on {{ post.date }}
+          </span> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Post Content -->
+<article>
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <h3 class="post-title">{{ post.name }}</h3>
+        <img src="{{post.img_url}}" class="col-md-5 " alt="..." >
+        <div class="col-xl-8">Description:</div>
+        <div class="col-xl-8"><a href="{{ post.map_url }}" target="_blank">{{ post.location }}</a></div>
+        <!-- Embedded YouTube video -->
+        <h4>Demo video:</h4>
+        <div class="video-container">
+          <iframe width="640" height="360" src="https://www.youtube.com/embed/IASW224b9KI?si=80KU9fSKW3yhz6rc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <button onclick="showCode('code1')" data-clipboard-target="#code1">main.py</button>
+            <button onclick="showCode('code2')" data-clipboard-target="#code2">main2.py</button>
+            <h6 class="card-title">main.py</h6>
+            <pre id="code1" style="display: block;">
+              <code class="hljs language-python" style="text-align: left;">
+                def hello_world():
+                  print("Hello, world!")
+              </code>
+            </pre>
+            <pre id="code2" style="display: none;">
+              <code class="language-python" style="text-align: left;">
+                def hello_world2():
+                  print("Hello, world!")
+              </code>
+            </pre>
+          </div>
+          <button class="copy-button">复制代码</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</article>
+
+{% include "footer.html" %}
+
+<script>
+  // 初始化 Clipboard.js
+  var clipboard = new ClipboardJS('.copy-button', {
+    target: function(trigger) {
+      return trigger.getAttribute('data-clipboard-target');
+    }
+  });
+
+  // 复制成功时显示提示
+  clipboard.on('success', function(e) {
+    console.log('Copied to clipboard!');
+    // 可以添加额外的交互，例如显示提示框或更改按钮文本
+  });
+
+  // 复制失败时显示提示
+  clipboard.on('error', function(e) {
+    console.error('Failed to copy to clipboard!');
+  });
+
+  function showCode(id) {
+    var codeBlocks = document.querySelectorAll('pre');
+    codeBlocks.forEach(function(block) {
+      block.style.display = 'none';
+    });
+    document.getElementById(id).style.display = 'block';
+  }
+
+  fetch('../static/code/fuuuu.py')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('code1').textContent = data;
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+
+</script>

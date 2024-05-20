@@ -1,0 +1,90 @@
+{% include "header.html" %}
+
+<!-- Page Header-->
+<header
+  class="masthead"
+  style="background-image: url('../static/assets/img/home-bg.jpg')"
+>
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="site-heading">
+          <h1>Jim Li's Project</h1>
+          <span class="subheading">A Blog Theme by Start Bootstrap</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Main Content-->
+<div class="container px-4 px-lg-5">
+  <div class="row gx-4 gx-lg-5 justify-content-center">
+    <div class="col-md-10 col-lg-8 col-xl-7">
+      <!-- Post preview-->
+      {% for post in all_posts %}
+      <div class="post-preview">
+        <a href="{{ url_for('show_post', post_id=post.id) }}">
+        <!-- <a href="{{ post.map_url }}" target="_blank"> -->
+          <div class="clearfix">
+            <img src="{{post.img_url}}" class="col-md-5 float-md-start mb-3 ms-md-3" alt="..." >
+            <h3 class="post-title">{{ post.name }}</h3>
+            <p class="post-subtitle">
+              <div class="row">
+                <div class="col-xl-4">Location:</div>
+                <div class="col-xl-8">{{ post.location }}</div>
+              </div>
+              <div class="row">
+                <div class="col-xl-4">Sockets:</div>
+                <div class="col-xl-8">{{ post.has_sockets }}</div>
+              </div>
+              <div class="row">
+                <div class="col-xl-4">Toilet:</div>
+                <div class="col-xl-8">{{ post.has_toilet }}</div>
+              </div>
+              <div class="row">
+                <div class="col-xl-4">Wifi:</div>
+                <div class="col-xl-8">{{ post.has_wifi }}</div>
+              </div>
+              <div class="row">
+                <div class="col-xl-4">Take Calls:</div>
+                <div class="col-xl-8">{{ post.can_take_calls }}</div>
+              </div>
+              <div class="row">
+                <div class="col-xl-4">Seats:</div>
+                <div class="col-xl-8">{{ post.seats }}</div>
+              </div>
+              <div class="row">
+                <div class="col-xl-4">Coffee Price:</div>
+                <div class="col-xl-8">{{ post.coffee_price }}</div>
+              </div>
+            </p>
+          </div>
+        </a>
+        <!-- Add code to delete posts below -->
+        <p class="post-meta float-md-end" >
+          <a href="{{ url_for('delete_post', post_id=post.id) }}">✘ delete</a>
+        </p>
+      </div>
+      <!-- Divider-->
+      <hr class="my-4" />
+      {% endfor %}
+
+      <!-- New Post -->
+      <div class="d-flex justify-content-end mb-4">
+      <!-- Adding new posts -->
+        <a
+          class="btn btn-primary float-right"
+          href="{{ url_for('add_new_post') }}"
+          >Add New Cafe</a
+        >
+      </div>
+
+      <!-- Pager-->
+      <!-- <div class="d-flex justify-content-end mb-4">
+        <a class="btn btn-secondary text-uppercase" href="#!">Older Posts →</a>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+{% include "footer.html" %}
