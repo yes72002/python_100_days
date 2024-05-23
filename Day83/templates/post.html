@@ -37,21 +37,25 @@
           <div class="card-body">
             <button onclick="showCode('code1')" data-clipboard-target="#code1">main.py</button>
             <button onclick="showCode('code2')" data-clipboard-target="#code2">main2.py</button>
-            <h6 class="card-title">main.py</h6>
             <pre id="code1" style="display: block;">
-              <code class="hljs language-python" style="text-align: left;">
-                def hello_world():
-                  print("Hello, world!")
-              </code>
+              <code class="hljs language-python" style="text-align: left;"></code>
             </pre>
             <pre id="code2" style="display: none;">
-              <code class="language-python" style="text-align: left;">
+              <code class="hljs language-python" style="text-align: left;">
                 def hello_world2():
                   print("Hello, world!")
               </code>
             </pre>
           </div>
-          <button class="copy-button">复制代码</button>
+
+          <a href="{{ url_for('show_post', post_id=post.id) }}"></a>
+          <a href="#!">
+            <button class="copy-button">Watch more</button>
+            <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
         </div>
 
       </div>
@@ -88,10 +92,13 @@
     document.getElementById(id).style.display = 'block';
   }
 
-  fetch('../static/code/fuuuu.py')
+  fetch('../static/code/day22/fuuuu.py')
     .then(response => response.text())
     .then(data => {
-      document.getElementById('code1').textContent = data;
+      // document.getElementById('code1').textContent = data;
+      const codeElement = document.getElementById('code1');
+      codeElement.textContent = data;
+      hljs.highlightElement(codeElement); // Highlight the code element
     })
     .catch(error => {
       console.error('Error:', error);
