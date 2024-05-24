@@ -25,18 +25,29 @@
     <div class="row gx-4 gx-lg-5 justify-content-center">
       <div class="col-md-10 col-lg-8 col-xl-7">
         <h3 class="post-title">{{ post.name }}</h3>
-        <img src="{{post.img_url}}" class="col-md-5 " alt="..." >
-        <div class="col-xl-8">Description:</div>
-        <div class="col-xl-8"><a href="{{ post.map_url }}" target="_blank">{{ post.location }}</a></div>
+
+
         <!-- Embedded YouTube video -->
-        <h4>Demo video:</h4>
-        <div class="video-container">
-          <iframe width="640" height="360" src="https://www.youtube.com/embed/IASW224b9KI?si=80KU9fSKW3yhz6rc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="card">
+          <div class="card-body">
+            <h4>Demo:</h4>
+            <img src="{{post.img_url}}" class="col-md-5 " alt="..." >
+            <div class="video-container">
+              <iframe width="672" height="378" src="https://www.youtube.com/embed/IASW224b9KI?si=80KU9fSKW3yhz6rc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        <!-- Description -->
+        <div class="card">
+          <div class="card-body">
+            <div class="col-xl-8">Description:</div>
+            <div class="col-xl-8"><a href="{{ post.map_url }}" target="_blank">{{ post.location }}</a></div>
+          </div>
         </div>
         <div class="card">
           <div class="card-body">
-            <button onclick="showCode('code1')" data-clipboard-target="#code1">main.py</button>
-            <button onclick="showCode('code2')" data-clipboard-target="#code2">main2.py</button>
+            <button onclick="showCode('code1')" class="btn btn-outline-dark d-inline-flex align-items-center btn-sm" data-clipboard-target="#code1">main.py</button>
+            <button onclick="showCode('code2')" class="btn btn-outline-dark d-inline-flex align-items-center btn-sm" data-clipboard-target="#code2">main2.py</button>
             <pre id="code1" style="display: block;">
               <code class="hljs language-python" style="text-align: left;"></code>
             </pre>
@@ -47,17 +58,17 @@
               </code>
             </pre>
           </div>
-
-          <a href="{{ url_for('show_post', post_id=post.id) }}"></a>
+          <div class="card-body">
+          <a href="{{ url_for('show_post', post_id=post.id) }}">
           <a href="#!">
-            <button class="copy-button">Watch more</button>
-            <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-            </span>
-        </a>
+            <button id="copy-button" class="btn btn-secondary copy-button">
+              <span class="fa-stack fa-lg"><i class="fab fa-github fa-stack-1x fa-inverse fa-2x"></i></span>
+              Copy my Code
+            </button>
+          </a>
+          </a>
+          </div>
         </div>
-
       </div>
     </div>
   </div>
