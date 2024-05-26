@@ -26,8 +26,10 @@ check_state = [0] * len(states_list)
 
 is_going_on = True
 while is_going_on:
-    answer_state = screen.textinput(title=f"{sum(check_state)}/50 States Correct", 
-                                    prompt="What's another state's name?").title()
+    answer_state = screen.textinput(
+        title=f"{sum(check_state)}/50 States Correct",
+        prompt="What's another state's name?"
+    ).title()
     if answer_state == "Exit":
         is_going_on = False
         # break
