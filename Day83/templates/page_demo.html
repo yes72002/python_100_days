@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-body">
+    <h4>Demo:</h4>
+      {% if post.img_url and post.img_url != "NULL" %}
+        <!-- <p>{{ post.img_url }}</p> -->
+        <img src="{{ post.img_url }}" class="d-flex justify-content-center col-md-5 w-100" alt="...">
+      {% endif %}
+      {% if post.video_url and post.video_url != "NULL" %}
+        <!-- <p>{{ post.video_url }}</p> -->
+        <div class="video-container">
+          <iframe width="672" height="378" src="{{ post.video_url }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      {% endif %}
+  </div>
+</div>

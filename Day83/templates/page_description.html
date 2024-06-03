@@ -1,0 +1,59 @@
+<div class="card">
+  <div class="card-body">
+    <h5>Description:
+      <p>{{ post.description }}</p>
+    </h5>
+    <h5>Tags:
+      <!-- <span class="badge text-bg-warning rounded-pill">Website</span>
+      <span class="badge text-bg-danger rounded-pill">Web-scraping</span>
+      <span class="badge text-bg-primary rounded-pill">Web-scraping</span>
+      <span class="badge text-bg-secondary rounded-pill">Automation</span> -->
+
+      {% if post.terminal %}
+      <span class="badge text-bg-secondary rounded-pill">Terminal</span>
+      {% endif %}
+      {% if post.object %}
+      <span class="badge text-bg-primary rounded-pill">Object</span>
+      {% endif %}
+      {% if post.turtle_screen %}
+      <span class="badge text-bg-success rounded-pill">Turtle_screen</span>
+      {% endif %}
+      {% if post.file_handling %}
+      <span class="badge text-bg-secondary rounded-pill">File_handling</span>
+      {% endif %}
+      {% if post.gui_tkinter %}
+      <span class="badge text-bg-danger rounded-pill">GUI_tkinter</span>
+      {% endif %}
+      {% if post.web_scraping %}
+      <span class="badge text-bg-info rounded-pill">Web_scraping</span>
+      {% endif %}
+      {% if post.website_route %}
+      <span class="badge text-bg-warning rounded-pill">Website_route</span>
+      {% endif %}
+      {% if post.automation %}
+      <span class="badge text-bg-secondary rounded-pill">Automation</span>
+      {% endif %}
+      {% if post.database %}
+      <span class="badge text-bg-light rounded-pill">Database</span>
+      {% endif %}
+    </h5>
+    <h5>Languages:
+      <!-- <span class="badge text-bg-warning rounded-pill">python</span>
+      <span class="badge text-bg-danger rounded-pill">html</span>
+      <span class="badge text-bg-primary rounded-pill">css</span>
+      <span class="badge text-bg-secondary rounded-pill">sqlite</span> -->
+      {% if post.python %}
+      <span class="badge text-bg-warning rounded-pill">python</span>
+      {% endif %}
+      {% if post.html %}
+      <span class="badge text-bg-danger rounded-pill">html</span>
+      {% endif %}
+      {% if post.css %}
+      <span class="badge text-bg-primary rounded-pill">css</span>
+      {% endif %}
+      {% if post.sqlite %}
+      <span class="badge text-bg-secondary rounded-pill">sqlite</span>
+      {% endif %}
+    </h5>
+  </div>
+</div>

@@ -1,0 +1,198 @@
+{% include "header.html" %}
+
+<!-- Page Header-->
+<header
+  class="masthead"
+  style="background-image: url('../static/assets/img/home-bg.jpg')"
+>
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="site-heading">
+          <h1>Cafe Shop</h1>
+          <h3>An eCommerce website with payment processing.</h3>
+          <span class="subheading">A Blog Theme by Start Bootstrap</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content-->
+<main>
+  <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <!-- Card Content-->
+        <div class="col">
+          <div class="card shadow-sm">
+            <form method="post" action="{{ url_for('view_cafe') }}">
+              <input type="hidden" name="coffee_name" value="Latte">
+              <button type="submit" class="btn btn btn-link">
+                <img src="../static/assets/img/latte.PNG" class="card-img-top" width="100%" height="300" alt="Card image">
+              </button>
+              <div class="card-body">
+                <h5 class="card-text">Latte</h5>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <label for="">Small</label>
+                    <input type="hidden" name="small_price" value="$ 3">
+                    <label for="">$ 3</label>
+                    <select name="small_num" class="form-select form-select-sm mb-3" aria-label="Small select example">
+                      <option selected>Numbers</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <label for="">Large</label>
+                    <input type="hidden" name="large_price" value="$ 4">
+                    <label for="">$ 4</label>
+                    <select name="large_num" class="form-select form-select-sm mb-3" aria-label="Small select example">
+                      <option selected>Numbers</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                  </div>
+                  <div class="d-flex justify-content-end align-items-center">
+                    <div class="btn-group">
+                      <button type="submit" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="submit" class="btn btn-sm btn-outline-secondary">Buy</button>
+                    </div>
+                  </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <form method="post" action="{{ url_for('view_cafe') }}">
+              <input type="hidden" name="coffee_name" value="Cappuccino">
+              <button type="submit" class="btn btn btn-link">
+                <img src="../static/assets/img/cappuccino.PNG" class="card-img-top" width="100%" height="300" alt="Card image">
+              </button>
+              <div class="card-body">
+                <h5 class="card-text">Cappuccino</h5>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <label for="">Small</label>
+                    <input type="hidden" name="small_price" value="$ 3">
+                    <label for="">$ 3</label>
+                    <select name="small_num" class="form-select form-select-sm mb-3" aria-label="Small select example">
+                      <option selected>Numbers</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <label for="">Large</label>
+                    <input type="hidden" name="large_price" value="$ 4">
+                    <label for="">$ 4</label>
+                    <select name="large_num" class="form-select form-select-sm mb-3" aria-label="Small select example">
+                      <option selected>Numbers</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                  </div>
+                  <div class="d-flex justify-content-end align-items-center">
+                    <div class="btn-group">
+                      <button type="submit" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="submit" class="btn btn-sm btn-outline-secondary">Buy</button>
+                    </div>
+                  </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <form method="post" action="{{ url_for('view_cafe') }}">
+              <input type="hidden" name="coffee_name" value="Espresso">
+              <button type="submit" class="btn btn btn-link">
+                <img src="../static/assets/img/expresso.PNG" class="card-img-top" width="100%" height="300" alt="Card image">
+              </button>
+              <div class="card-body">
+                <h5 class="card-text">Espresso</h5>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <label for="">Small</label>
+                    <input type="hidden" name="small_price" value="$ 2">
+                    <label for="">$ 2</label>
+                    <select name="small_num" class="form-select form-select-sm mb-3" aria-label="Small select example">
+                      <option selected>Numbers</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <label for="">Large</label>
+                    <input type="hidden" name="large_price" value="$ 3">
+                    <label for="">$ 3</label>
+                    <select name="large_num" class="form-select form-select-sm mb-3" aria-label="Small select example">
+                      <option selected>Numbers</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                  </div>
+                  <div class="d-flex justify-content-end align-items-center">
+                    <div class="btn-group">
+                      <button type="submit" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="submit" class="btn btn-sm btn-outline-secondary">Buy</button>
+                    </div>
+                  </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <form method="post" action="{{ url_for('view_cafe') }}">
+              <input type="hidden" name="coffee_name" value="Mocha">
+              <button type="submit" class="btn btn btn-link">
+                <img src="../static/assets/img/mocha.PNG" class="card-img-top" width="100%" height="300" alt="Card image">
+              </button>
+              <div class="card-body">
+                <h5 class="card-text">Mocha</h5>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <label for="">Small</label>
+                    <input type="hidden" name="small_price" value="$ 4">
+                    <label for="">$ 4</label>
+                    <select name="small_num" class="form-select form-select-sm mb-3" aria-label="Small select example">
+                      <option selected>Numbers</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <label for="">Large</label>
+                    <input type="hidden" name="large_price" value="$ 5">
+                    <label for="">$ 5</label>
+                    <select name="large_num" class="form-select form-select-sm mb-3" aria-label="Small select example">
+                      <option selected>Numbers</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                  </div>
+                  <div class="d-flex justify-content-end align-items-center">
+                    <div class="btn-group">
+                      <button type="submit" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="submit" class="btn btn-sm btn-outline-secondary">Buy</button>
+                    </div>
+                  </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</main>
+
+{% include "footer.html" %}

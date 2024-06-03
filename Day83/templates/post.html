@@ -1,23 +1,5 @@
 {% include "header.html" %}
-
-<!-- Page Header-->
-<header class="masthead" style="background-image: url('{{post.img_url}}')">
-  <div class="container position-relative px-4 px-lg-5">
-    <div class="row gx-4 gx-lg-5 justify-content-center">
-      <div class="col-md-10 col-lg-8 col-xl-7">
-        <div class="post-heading">
-          <h1>{{ post.name }}</h1>
-          <!-- <h2 class="subheading">{{ post.location }}</h2> -->
-          <!-- <span class="meta"
-            >Posted by
-            <a href="/" target="_blank">{{ post.location }}</a>
-            on {{ post.date }}
-          </span> -->
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
+{% include "page_header.html" %}
 
 <!-- Post Content -->
 <article>
@@ -26,70 +8,33 @@
       <div class="col-md-10 col-lg-8 col-xl-7">
         <h3 class="post-title">{{ post.name }}</h3>
 
-
-        <!-- Embedded YouTube video -->
+        <!-- Demo -->
         <div class="card">
           <div class="card-body">
             <h4>Demo:</h4>
-            <img src="{{post.img_url}}" class="col-md-5 " alt="..." >
+            <img src="../static/assets/img/about-bg.jpg" class="col-md-5 " alt="..." >
             <div class="video-container">
               <iframe width="672" height="378" src="https://www.youtube.com/embed/IASW224b9KI?si=80KU9fSKW3yhz6rc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
         </div>
+
         <!-- Description -->
-        <div class="card">
-          <div class="card-body">
-            <h5>Description:
-              <p>123</p>
-            </h5>
-            <h5>Tags:
-              <span class="badge text-bg-warning rounded-pill">Website</span>
-              <span class="badge text-bg-danger rounded-pill">Web-scraping</span>
-              <span class="badge text-bg-primary rounded-pill">Web-scraping</span>
-              <span class="badge text-bg-secondary rounded-pill">Automation</span>
-              <span class="badge text-bg-secondary rounded-pill">Automation</span>
-              <span class="badge text-bg-secondary rounded-pill">Automation</span>
-              <span class="badge text-bg-secondary rounded-pill">Automation</span>
-              <span class="badge text-bg-secondary rounded-pill">Automation</span>
-              <span class="badge text-bg-secondary rounded-pill">Automation</span>
-              <span class="badge text-bg-secondary rounded-pill">Automation</span>
-              <span class="badge text-bg-secondary rounded-pill">Automation</span>
-              <span class="badge text-bg-secondary rounded-pill">Automation</span>
-              <span class="badge text-bg-secondary rounded-pill">Automation</span>
-            </h5>
-            <h5>Languages:
-              <span class="badge text-bg-warning rounded-pill">python</span>
-              <span class="badge text-bg-danger rounded-pill">html</span>
-              <span class="badge text-bg-primary rounded-pill">css</span>
-              <span class="badge text-bg-secondary rounded-pill">sqlite</span>
-            </h5>
-            <h5><a href="{{ post.map_url }}" target="_blank">{{ post.location }}</a></h5>
-          </div>
-        </div>
+        {% include "page_description.html" %}
+
+        <!-- Code -->
         <div class="card">
           <div class="card-body">
             <button onclick="showCode('code1')" class="btn btn-outline-dark d-inline-flex align-items-center btn-sm" data-clipboard-target="#code1">main.py</button>
             <button onclick="showCode('code2')" class="btn btn-outline-dark d-inline-flex align-items-center btn-sm" data-clipboard-target="#code2">main2.py</button>
-            <pre id="code1" style="display: block;">
-              <code class="hljs language-python" style="text-align: left;"></code>
-            </pre>
-            <pre id="code2" style="display: none;">
-              <code class="hljs language-python" style="text-align: left;">
-                def hello_world2():
-                  print("Hello, world!")
-              </code>
-            </pre>
-          </div>
-          <div class="card-body">
-          <a href="{{ url_for('show_post', post_id=post.id) }}">
-          <a href="#!">
-            <button id="copy-button" class="btn btn-secondary copy-button">
-              <span class="fa-stack fa-lg"><i class="fab fa-github fa-stack-1x fa-inverse fa-2x"></i></span>
-              Copy my Code
-            </button>
-          </a>
-          </a>
+            <pre id="code1" style="display: block;"><code class="hljs language-python" style="text-align: left;"></code></pre>
+            <pre id="code2" style="display: none;"><code class="hljs language-python" style="text-align: left;"></code></pre>
+            <a href="#!" target="_blank">
+              <button id="copy-button" class="btn btn-secondary copy-button">
+                <span class="fa-stack fa-lg"><i class="fab fa-github fa-stack-1x fa-inverse fa-2x"></i></span>
+                Copy my Code
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -98,35 +43,10 @@
 </article>
 
 {% include "footer.html" %}
+{% include "page_script.html" %}
 
 <script>
-  // 初始化 Clipboard.js
-  var clipboard = new ClipboardJS('.copy-button', {
-    target: function(trigger) {
-      return trigger.getAttribute('data-clipboard-target');
-    }
-  });
-
-  // 复制成功时显示提示
-  clipboard.on('success', function(e) {
-    console.log('Copied to clipboard!');
-    // 可以添加额外的交互，例如显示提示框或更改按钮文本
-  });
-
-  // 复制失败时显示提示
-  clipboard.on('error', function(e) {
-    console.error('Failed to copy to clipboard!');
-  });
-
-  function showCode(id) {
-    var codeBlocks = document.querySelectorAll('pre');
-    codeBlocks.forEach(function(block) {
-      block.style.display = 'none';
-    });
-    document.getElementById(id).style.display = 'block';
-  }
-
-  fetch('../static/code/day22/fuuuu.py')
+  fetch('../static/code/Day22/d22pj_pong_game.py')
     .then(response => response.text())
     .then(data => {
       // document.getElementById('code1').textContent = data;
@@ -137,5 +57,4 @@
     .catch(error => {
       console.error('Error:', error);
     });
-
 </script>

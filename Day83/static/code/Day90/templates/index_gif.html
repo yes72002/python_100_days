@@ -1,0 +1,88 @@
+{% from 'bootstrap5/form.html' import render_form %}
+{% include "header.html" %}
+
+<!-- Page Header-->
+<header
+  class="masthead"
+  style="background-image: url('../static/assets/img/home-bg.jpg')"
+>
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-8">
+        <div class="site-heading">
+          <h2>The Most Dangerous Writing App</h2>
+          <h5>An online writing app where if you stop typing, your work will disappear.</h5>
+          <span class="subheading">A Blog Theme by Start Bootstrap</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Main Content-->
+<div class="container px-4 px-lg-5">
+  <div class="row gx-4 gx-lg-5 text-center justify-content-center">
+    <!-- Left Side -->
+    <div class="col col-lg-6">
+      <h4 for="task">Counting to zero will blow up your text.</h4>
+      <div class="text-start" id="editor" contenteditable="true"></div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="col col-lg-4 text-center">
+      <div>
+        <h4>Timer</h4>
+        <!-- <div id="timer">5</div> -->
+        <img id="timer-img" src="../static/assets/img/5.gif" alt="5">
+      </div>
+      <script>
+				let timerValue = 5; // 初始计时器值
+
+        // Function to clear content if typing stops
+        function clearContent() {
+            document.getElementById('editor').textContent = '';
+        }
+
+        // Function to update timer every second
+        function updateTimer() {
+          timer = setInterval(function() {
+            // Get timer element
+            let timerImg = document.getElementById('timer-img');
+            // Decrement timer value
+						timerValue--;
+
+            // If timer reaches 0, clear editor content
+            if (timerValue === 0) {
+              clearInterval(timer);
+              clearContent();
+							timerImg.src = '../static/assets/img/boom.gif'
+							timerImg.alt = 'Boom!';
+            } else {
+							// Update timer image
+							timerImg.src = `../static/assets/img/${timerValue}.gif`;
+							timerImg.alt = `${timerValue}`;
+            }
+          }, 1000);
+        }
+
+        // Event listener for keyup event
+        document.getElementById('editor').addEventListener('keyup', function() {
+          // Clear previous timer
+          clearInterval(timer);
+					// Reset timer
+					timerValue = 5;
+          // Reset timer image
+					let timerImg = document.getElementById('timer-img'); // 這行要加，新的function
+          timerImg.src = `../static/assets/img/5.gif`;
+          timerImg.alt = `5`;
+          // Set timer to update every second
+          updateTimer();
+        });
+
+        // Call function to update timer
+        updateTimer();
+      </script>
+    </div>
+  </div>
+</div>
+
+{% include "footer.html" %}

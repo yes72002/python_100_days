@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include "header.html" %}
+  <body>
+    <!-- Navigation-->
+    {% include "page_navigation.html" %}
+    <!-- Page Header-->
+    {% include "page_header.html" %}
+    <!-- Post Content -->
+    <article>
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <h3 class="post-title">{{ post.name }}</h3>
+            <!-- Demo -->
+            {% include "page_demo.html" %}
+            <!-- Description -->
+            {% include "page_description.html" %}
+            <!-- Code -->
+            <div class="card">
+              <div class="card-body">
+                <button onclick="showCode('code1')" class="btn btn-outline-dark d-inline-flex align-items-center btn-sm">
+                  main1.py
+                </button>
+                <button onclick="showCode('code2')" class="btn btn-outline-dark d-inline-flex align-items-center btn-sm">
+                  main2.py
+                </button>
+                <pre id="code1" style="display: block;"><code class="hljs language-python" style="text-align: left;"></code></pre>
+                <pre id="code2" style="display: none;"><code class="hljs language-python" style="text-align: left;"></code></pre>
+
+                <a href="{{ post.code_url }}" target="_blank">
+                  <button id="copy-button" class="btn btn-secondary copy-button">
+                    <span class="fa-stack fa-lg"><i class="fab fa-github fa-stack-1x fa-inverse fa-2x"></i></span>
+                    Copy my Code
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- Footer-->
+    {% include "footer.html" %}
+
+    <!-- Scripts -->
+    {% block scripts %}
+    {% include "page_script.html" %}
+    <script>
+      // Fetch and highlight code
+      fetchAndHighlightCode('../static/code/Day27/d27pj_mile_to_km.py', 'code1');
+      fetchAndHighlightCode('../static/code/Day27/d27pj2_mile_to_km.py', 'code2');
+    </script>
+    {% endblock %}
+  </body>
+</html>
